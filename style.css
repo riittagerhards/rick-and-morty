@@ -37,6 +37,10 @@ h5 {
   font-family: var(--font-family-headline);
 }
 
+p {
+  color: var(--color-primary);
+}
+
 header {
   background-color: var(--color-background-header);
   color: var(--color-header-text);
