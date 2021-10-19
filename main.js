@@ -1,5 +1,6 @@
 import "./style.css";
 import { createElement } from "./lib/elements";
+import createCharacterCard from "./components/characterCard";
 
 function renderApp() {
   const appElement = document.querySelector("#app");
@@ -11,7 +12,7 @@ function renderApp() {
     },
     [
       createElement("h1", {
-        textContent: "Rick and Morty",
+        textContent: "All about Rick and Morty",
       }),
     ]
   );
@@ -22,8 +23,16 @@ function renderApp() {
       className: "main",
     },
     [
-      createElement("p", {
-        textContent: "!under construction!",
+      createCharacterCard({
+        picture: "https://avatarfiles.alphacoders.com/160/160369.jpg",
+        name: "Rick",
+        status: "alive - human",
+      }),
+      createCharacterCard({
+        picture:
+          "https://i.kym-cdn.com/photos/images/original/000/692/145/49c.png",
+        name: "Morty",
+        status: "alive - human",
       }),
     ]
   );
