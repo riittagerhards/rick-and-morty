@@ -35,7 +35,7 @@ function renderApp() {
     },
     [
       createElement("p", {
-        textContent: "I am footer",
+        textContent: "I am  a footer",
       }),
     ]
   );
