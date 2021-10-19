@@ -8,9 +8,9 @@
 
 :root {
   /* COLORS */
-  --color-primary: orange;
   --color-header-text: #202329;
   --color-main-text: #e0ffff;
+  --color-hover-text: orange;
   --color-background-header: white;
   --color-background-main: rgb(46, 43, 43);
   --color-background-card: #3c3e44;
@@ -25,8 +25,8 @@
 
 body {
   font-family: var(--font-family-text);
-  margin: 0;
   background-color: var(--color-background-main);
+  margin: 0;
 }
 
 h1,
@@ -37,19 +37,25 @@ h5 {
   font-family: var(--font-family-headline);
 }
 
-p {
-  color: var(--color-primary);
-}
-
 header {
   background-color: var(--color-background-header);
   color: var(--color-header-text);
+  font-family: var(--font-family-headline);
   text-align: center;
   padding: 4rem 2rem;
 }
 
 main {
   background-color: var(--color-background-main);
-  color: var(--color-main-text);
+  color: var(--color-hover-text);
   padding: 2rem;
+}
+
+footer {
+  background-color: var(--color-background-main);
+  color: var(--color-main-text);
+  font-family: var(--font-family-text);
+  padding: 2rem;
+  position: fixed;
+  bottom: 1rem;
 }

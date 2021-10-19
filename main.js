@@ -27,7 +27,20 @@ function renderApp() {
       }),
     ]
   );
-  appElement.append(headerElement, mainElement);
+
+  const footerElement = createElement(
+    "footer",
+    {
+      className: "footer",
+    },
+    [
+      createElement("p", {
+        textContent: "I am footer",
+      }),
+    ]
+  );
+
+  appElement.append(headerElement, mainElement, footerElement);
 }
 
 renderApp();
