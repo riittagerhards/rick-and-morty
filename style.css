@@ -1,8 +1,61 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS */
+  --color-header-text: #202329;
+  --color-main-text: #e0ffff;
+  --color-hover-text: #ff9800;
+  --color-background-header: white;
+  --color-background-main: rgb(46, 43, 43);
+  --color-background-card: #3c3e44;
+
+  /* FONT */
+  --font-family-headline: "Poppins", sans-serif;
+  --font-family-text: "Inconsolata", monospace;
+
+  /* BORDERS */
+  --border-radius: 15px;
+}
+
+body {
+  font-family: var(--font-family-text);
+  background-color: var(--color-background-main);
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family-headline);
+}
+
+header {
+  background-color: var(--color-background-header);
+  color: var(--color-header-text);
+  font-family: var(--font-family-headline);
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 4rem 2rem;
+}
+
+main {
+  background-color: var(--color-background-main);
+  color: var(--color-hover-text);
+  padding: 2rem;
+}
+
+footer {
+  background-color: var(--color-background-main);
+  color: var(--color-main-text);
+  font-family: var(--font-family-text);
+  padding: 2rem;
+  position: fixed;
+  bottom: 1rem;
 }
