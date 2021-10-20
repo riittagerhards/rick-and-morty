@@ -49,6 +49,8 @@ main {
   background-color: var(--color-background-main);
   color: var(--color-main-text);
   padding: 2rem;
+  display: grid;
+  gap: 1rem;
 }
 
 footer {
@@ -56,6 +58,5 @@ footer {
   color: var(--color-main-text);
   font-family: var(--font-family-text);
   padding: 2rem;
-  position: fixed;
   bottom: 1rem;
 }
