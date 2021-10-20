@@ -2,21 +2,21 @@ import { createElement } from "../lib/elements";
 import styles from "./characterCard.module.css";
 
 export default function createCharacterCard({
-  picture,
+  image,
   name,
   status,
-  race,
-  lastKnownLocation,
-  firstSeenIn,
+  species,
+  location,
+  episode,
 }) {
   const characterCard = createElement("article", { className: styles.card }, [
-    createElement("img", { className: styles.profilePicture, src: picture }),
+    createElement("img", { className: styles.profilePicture, src: image }),
     createElement("h2", { textContent: name }),
-    createElement("p", { textContent: `${status} - ${race}` }),
+    createElement("p", { textContent: `${status} - ${species}` }),
     createElement("h3", { textContent: "Last known location:" }),
-    createElement("p", { textContent: lastKnownLocation }),
+    createElement("p", { textContent: location.name }),
     createElement("h3", { textContent: "First seen in:" }),
-    createElement("p", { textContent: firstSeenIn }),
+    createElement("p", { textContent: episode[0] }),
   ]);
 
   return characterCard;

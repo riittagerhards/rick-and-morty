@@ -2,7 +2,7 @@ import "./style.css";
 import { createElement } from "./lib/elements";
 import createCharacterCard from "./components/characterCard";
 
-function renderApp() {
+async function renderApp() {
   const appElement = document.querySelector("#app");
 
   const headerElement = createElement(
@@ -17,7 +17,16 @@ function renderApp() {
     ]
   );
 
-  const characters = [
+  const response = await fetch("https://rickandmortyapi.com/api/character");
+  const body = await response.json();
+  const characters = body.results;
+
+  //  fetch("https://rickandmortyapi.com/api/character").then((response) => {
+  //    console.log(response);
+  //    response.json().then((body) => console.log(body));
+  //  });
+
+  /* const characters = [
     {
       picture: "https://rickandmortyapi.com/api/character/avatar/35.jpeg",
       name: "Bepisian",
@@ -34,7 +43,7 @@ function renderApp() {
       lastKnownLocation: "unknown",
       firstSeenIn: "Morty's Mind Blowers",
     },
-  ];
+  ];*/
 
   const characterCards = characters.map((character) =>
     createCharacterCard(character)
