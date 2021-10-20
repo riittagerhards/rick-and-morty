@@ -19,15 +19,20 @@ function renderApp() {
 
   const characters = [
     {
-      picture: "https://avatarfiles.alphacoders.com/160/160369.jpg",
-      name: "Rick",
-      status: "alive - human",
+      picture: "https://rickandmortyapi.com/api/character/avatar/35.jpeg",
+      name: "Bepisian",
+      status: "Alive",
+      race: "Alien",
+      lastKnownLocation: "Bepis 9",
+      firstSeenIn: "Pilot",
     },
     {
-      picture:
-        "https://i.kym-cdn.com/photos/images/original/000/692/145/49c.png",
-      name: "Morty",
-      status: "alive - human",
+      picture: "https://rickandmortyapi.com/api/character/avatar/368.jpeg",
+      name: "Truth Tortoise",
+      status: "Unknown",
+      race: "Mythological Creature",
+      lastKnownLocation: "unknown",
+      firstSeenIn: "Morty's Mind Blowers",
     },
   ];
 
