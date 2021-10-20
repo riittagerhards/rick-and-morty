@@ -17,24 +17,30 @@ function renderApp() {
     ]
   );
 
+  const characters = [
+    {
+      picture: "https://avatarfiles.alphacoders.com/160/160369.jpg",
+      name: "Rick",
+      status: "alive - human",
+    },
+    {
+      picture:
+        "https://i.kym-cdn.com/photos/images/original/000/692/145/49c.png",
+      name: "Morty",
+      status: "alive - human",
+    },
+  ];
+
+  const characterCards = characters.map((character) =>
+    createCharacterCard(character)
+  );
+
   const mainElement = createElement(
     "main",
     {
       className: "main",
     },
-    [
-      createCharacterCard({
-        picture: "https://avatarfiles.alphacoders.com/160/160369.jpg",
-        name: "Rick",
-        status: "alive - human",
-      }),
-      createCharacterCard({
-        picture:
-          "https://i.kym-cdn.com/photos/images/original/000/692/145/49c.png",
-        name: "Morty",
-        status: "alive - human",
-      }),
-    ]
+    characterCards
   );
 
   const footerElement = createElement(
