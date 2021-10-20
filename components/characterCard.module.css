@@ -1,0 +1,8 @@
+.card {
+  background: var(--color-background-card);
+}
+
+.profilePicture {
+  width: 6rem;
+  height: 6rem;
+}

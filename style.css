@@ -11,9 +11,9 @@
   --color-header-text: #202329;
   --color-main-text: #e0ffff;
   --color-hover-text: #ff9800;
-  --color-background-header: white;
-  --color-background-main: rgb(46, 43, 43);
-  --color-background-card: #3c3e44;
+  --color-background-header: #fff;
+  --color-background-main: #2e2b2b;
+  --color-background-card: #737477;
 
   /* FONT */
   --font-family-headline: "Poppins", sans-serif;
@@ -47,7 +47,7 @@ header {
 
 main {
   background-color: var(--color-background-main);
-  color: var(--color-hover-text);
+  color: var(--color-main-text);
   padding: 2rem;
 }
 
