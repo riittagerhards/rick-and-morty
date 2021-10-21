@@ -1,7 +1,7 @@
 import "./style.css";
 import { createElement } from "./lib/elements";
 import createCharacterCard from "./components/characterCard";
-import { createFetchElement } from "./lib/fetchElement.js";
+import { createFetchCharacters } from "./lib/characters.js";
 
 async function renderApp() {
   const appElement = document.querySelector("#app");
@@ -18,7 +18,7 @@ async function renderApp() {
     ]
   );
 
-  const characters = await createFetchElement();
+  const characters = await createFetchCharacters();
 
   const characterCards = characters.map((character) =>
     createCharacterCard(character)
