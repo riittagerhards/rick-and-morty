@@ -2,7 +2,7 @@ import "./style.css";
 import { createElement } from "./lib/elements";
 import createCharacterCard from "./components/characterCard";
 import { fetchCharacters } from "./lib/characters.js";
-import createCharacterSearch from "./components/characterSearch.js";
+import { createCharacterSearch } from "./components/characterSearch.js";
 
 async function renderApp() {
   const appElement = document.querySelector("#app");
@@ -19,13 +19,26 @@ async function renderApp() {
     ]
   );
 
+  async function handleSubmit(searchQuery) {
+    const response = await fetch(
+      `https://rickandmortyapi.com/api/character/?name=${searchQuery}`
+    );
+    const body = await response.json();
+    const characters = body.results;
+    const characterElements = characters.map((character) =>
+      createCharacterCard(character)
+    );
+    mainElement.innerHTML = "";
+    mainElement.append(...characterElements);
+  }
+
+  const characterSearch = createCharacterSearch(handleSubmit);
+
   const characters = await fetchCharacters();
 
   const characterCards = characters.map((character) =>
     createCharacterCard(character)
   );
-
-  const characterSearch = createCharacterSearch();
 
   const mainElement = createElement(
     "main",

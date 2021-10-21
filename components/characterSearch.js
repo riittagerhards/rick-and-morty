@@ -1,7 +1,7 @@
 import { createElement } from "../lib/elements";
 import styles from "./characterSearch.module.css";
 
-export default function createCharacterSearch(onSubmit) {
+export function createCharacterSearch(onSubmit) {
   const searchField = createElement("input", {
     type: "search",
     placeholder: "your search here...",
