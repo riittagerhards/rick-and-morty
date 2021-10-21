@@ -1,7 +1,7 @@
 import "./style.css";
 import { createElement } from "./lib/elements";
 import createCharacterCard from "./components/characterCard";
-import { createFetchCharacters } from "./lib/characters.js";
+import { fetchCharacters } from "./lib/characters.js";
 
 async function renderApp() {
   const appElement = document.querySelector("#app");
