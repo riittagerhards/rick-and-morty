@@ -18,7 +18,7 @@ async function renderApp() {
     ]
   );
 
-  const characters = await createFetchCharacters();
+  const characters = await fetchCharacters();
 
   const characterCards = characters.map((character) =>
     createCharacterCard(character)
