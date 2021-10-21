@@ -21,30 +21,6 @@ async function renderApp() {
   const body = await response.json();
   const characters = body.results;
 
-  //  fetch("https://rickandmortyapi.com/api/character").then((response) => {
-  //    console.log(response);
-  //    response.json().then((body) => console.log(body));
-  //  });
-
-  /* const characters = [
-    {
-      picture: "https://rickandmortyapi.com/api/character/avatar/35.jpeg",
-      name: "Bepisian",
-      status: "Alive",
-      race: "Alien",
-      lastKnownLocation: "Bepis 9",
-      firstSeenIn: "Pilot",
-    },
-    {
-      picture: "https://rickandmortyapi.com/api/character/avatar/368.jpeg",
-      name: "Truth Tortoise",
-      status: "Unknown",
-      race: "Mythological Creature",
-      lastKnownLocation: "unknown",
-      firstSeenIn: "Morty's Mind Blowers",
-    },
-  ];*/
-
   const characterCards = characters.map((character) =>
     createCharacterCard(character)
   );
