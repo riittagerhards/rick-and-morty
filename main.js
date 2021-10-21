@@ -2,6 +2,7 @@ import "./style.css";
 import { createElement } from "./lib/elements";
 import createCharacterCard from "./components/characterCard";
 import { fetchCharacters } from "./lib/characters.js";
+import createCharacterSearch from "./components/characterSearch.js";
 
 async function renderApp() {
   const appElement = document.querySelector("#app");
@@ -24,6 +25,8 @@ async function renderApp() {
     createCharacterCard(character)
   );
 
+  const characterSearch = createCharacterSearch();
+
   const mainElement = createElement(
     "main",
     {
@@ -44,7 +47,7 @@ async function renderApp() {
     ]
   );
 
-  appElement.append(headerElement, mainElement, footerElement);
+  appElement.append(headerElement, characterSearch, mainElement, footerElement);
 }
 
 renderApp();

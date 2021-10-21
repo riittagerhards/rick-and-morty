@@ -1,0 +1,15 @@
+.searchField {
+  background-color: var(--color-main-text);
+}
+
+.searchButton {
+  color: hotpink;
+  margin-left: 1rem;
+}
+
+.searchForm {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  grid-auto-flow: column;
+  padding: 2rem;
+}
